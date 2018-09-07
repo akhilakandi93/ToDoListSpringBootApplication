@@ -15,16 +15,27 @@
 <body>
  <div class="container">
   <spring:url value="/task/saveTask" var="saveURL" />
-  <h2>Task</h2>
+  <br><br>
+  <h2>Add New Task</h2>
+  <br>
   <form:form modelAttribute="taskForm" method="post" action="${saveURL }" cssClass="form" >
-   <form:hidden path="id"/>
+   <form:hidden path="task_id"/>
    <div class="form-group">
-    <label>Title</label>
-    <form:input path="title" cssClass="form-control" id="taskName" />
+    <label>Task Name</label>
+    <form:input path="taskName" cssClass="form-control" id="taskName" />
    </div>
    <div class="form-group">
-    <label>Category</label>
-    <form:input path="category" cssClass="form-control" id="taskDescription" />
+    <label>Task Description</label>
+    <form:input path="taskDescription" cssClass="form-control" id="taskDescription" />
+   </div>
+    <div class="form-group">
+    <label>Task Status</label>
+    <form:input path="status" cssClass="form-control" id="status" />
+   </div>
+   <br>
+    <div class="form-group">
+    <label>Task Priority</label>
+    <form:input path="priority" cssClass="form-control" id="priority" />
    </div>
    <button type="submit" class="btn btn-primary">Save</button>
   </form:form>

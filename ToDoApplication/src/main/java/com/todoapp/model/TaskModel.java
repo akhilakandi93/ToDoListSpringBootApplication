@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class TaskModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int task_id;
+	public long task_id;
 
 	@Column(name="task_name")
 	public String taskName;
@@ -26,11 +26,11 @@ public class TaskModel {
 	@Column(name="task_status")
     public String status;
 
-	public int getTask_id() {
+	public long getTask_id() {
 		return task_id;
 	}
 
-	public void setTask_id(int task_id) {
+	public void setTask_id(long task_id) {
 		this.task_id = task_id;
 	}
 	

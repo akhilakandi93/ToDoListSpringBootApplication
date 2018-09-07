@@ -18,8 +18,9 @@
   <h2>ToDo List</h2>
   <table class="table table-striped">
    <thead>
-    <th scope="row">#ID</th>
+    <th scope="row">ID</th>
     <th scope="row">Task Name</th>
+    <th scope="row">View</th>
     <th scope="row">Update</th>
     <th scope="row">Delete</th>
    </thead>
@@ -28,6 +29,10 @@
      <tr>
       <td>${task.task_id }</td>
       <td>${task.taskName }</td>
+      <td>
+       <spring:url value="/task/viewTask/${task.task_id }" var="viewURL" />
+       <a class="btn btn-primary" href="${viewURL }" role="button" >View</a>
+      </td>
       <td>
        <spring:url value="/task/updateTask/${task.task_id }" var="updateURL" />
        <a class="btn btn-primary" href="${updateURL }" role="button" >Update</a>
