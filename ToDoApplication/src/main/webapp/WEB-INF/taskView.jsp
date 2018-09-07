@@ -8,7 +8,7 @@
 <html>
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
- <title>Task Form</title>
+ <title>Task Details</title>
  <link href="../../webjars/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
  <script src="../../webjars/bootstrap/4.0.0/js/bootstrap.min.js"></script>
  <script src="../../webjars/jquery/3.0.0/js/jquery.min.js"></script>
@@ -21,7 +21,7 @@
   <br>
   <label></label>
   <form:form modelAttribute="taskForm" method="get" action="${list}" cssClass="form" >
- <div class="card">
+ <div class="form-group">
    <h4>${taskForm.taskName}</h4>
     <label><b>Task Description:</b> &nbsp;${taskForm.taskDescription}</label>
     <br>
@@ -29,7 +29,9 @@
     <br>
     <label><b>Priority: </b>&nbsp;${taskForm.priority}</label>
    </div>
-   <button type="submit" class="btn btn-primary">Ok</button>
+   <spring:url value="/task/list" var="listURL" />
+       <a class="btn btn-primary" href="${listURL }" role="button" >Ok</a>
+  
   </form:form>
   
  </div>

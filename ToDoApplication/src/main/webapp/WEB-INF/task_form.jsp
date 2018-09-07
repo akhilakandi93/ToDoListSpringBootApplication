@@ -7,7 +7,7 @@
 <html>
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
- <title>Task Form</title>
+ <title>New Task</title>
  <link href="../../webjars/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
  <script src="../../webjars/bootstrap/4.0.0/js/bootstrap.min.js"></script>
  <script src="../../webjars/jquery/3.0.0/js/jquery.min.js"></script>
@@ -22,20 +22,19 @@
    <form:hidden path="task_id"/>
    <div class="form-group">
     <label>Task Name</label>
-    <form:input path="taskName" cssClass="form-control" id="taskName" />
+    <form:input path="taskName" cssClass="form-control" id="taskName" minlength="6"  required="required" />
    </div>
    <div class="form-group">
     <label>Task Description</label>
-    <form:input path="taskDescription" cssClass="form-control" id="taskDescription" />
+    <form:input path="taskDescription" cssClass="form-control" id="taskDescription" minlength="10" />
    </div>
     <div class="form-group">
     <label>Task Status</label>
-    <form:input path="status" cssClass="form-control" id="status" />
+    <form:input path="status" cssClass="form-control" id="status" required="required" minlength="6"/>
    </div>
-   <br>
     <div class="form-group">
     <label>Task Priority</label>
-    <form:input path="priority" cssClass="form-control" id="priority" />
+    <form:input path="priority" cssClass="form-control" id="priority" required="required" minlength="6"/>
    </div>
    <button type="submit" class="btn btn-primary">Save</button>
   </form:form>
