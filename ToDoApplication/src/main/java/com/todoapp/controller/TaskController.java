@@ -28,7 +28,6 @@ public class TaskController {
 	 public ModelAndView list() {
 	  ModelAndView model = new ModelAndView("task_list");
 	  List<TaskModel> taskList = taskService.getAllTasks();
-	  System.out.println("Printing task: "+taskList.get(0).task_id);
 	  log.info("Loading ToDo Tasks..");
 	  model.addObject("taskList", taskList);
 	  return model;
